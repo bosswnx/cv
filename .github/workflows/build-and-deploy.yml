@@ -39,8 +39,8 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp cv-zh.pdf _site/cv-zh.pdf
-          cp cv-en.pdf _site/cv-en.pdf
+          cp template/cv-zh.pdf _site/cv-zh.pdf
+          cp template/cv-en.pdf _site/cv-en.pdf
           cat > _site/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="zh-CN">
