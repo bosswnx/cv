@@ -51,7 +51,7 @@
 
 = *王诺贤*
 
-Email: bosswnx\@qq.com | GitHub:
+WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 #link("https://github.com/bosswnx")[bosswnx] | Website: #link("https://bosswnx.xyz")[bosswnx.xyz]
 
 == *教育经历*
