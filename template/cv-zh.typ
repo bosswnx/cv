@@ -84,13 +84,13 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 个人在研科研项目，为 RISC-V SBI 引导程序设计的全自动模糊测试工具，能够自动根据 SBI 规范提供的接口定义生成测试用例，并利用 QEMU 模拟器执行测试。支持代码覆盖率，种子变异等高级功能。目前已找出两个 RustSBI 的 bug 并被社区确认。
 
 *MiniOB* #h(1fr) 2024/09 -- 2024/10 \
-#link("https://open.oceanbase.com/competition")[⼤学⽣计算机系统能⼒⼤赛（OceanBase 数据库大赛）]参赛作品，实现一个精简的数据库内核。本人作为比赛队长，完成超过一半的赛题，内容涉及 update 等基础功能，B+Tree、表达式、函数等高级功能。初赛满分通过，全国排名 19，北京市排名 3。GitHub：https://github.com/bosswnx/miniob-2024
+#link("https://open.oceanbase.com/competition")[全国⼤学⽣计算机系统能⼒⼤赛（OceanBase 数据库大赛）]参赛作品，实现一个精简的数据库内核。本人作为比赛队长，完成超过一半的赛题，内容涉及 update 等基础功能，B+Tree、表达式、函数等高级功能。初赛满分通过，全国排名 19，北京市排名 3。GitHub：https://github.com/bosswnx/miniob-2024
 
 *chaos* #h(1fr) 2024/01 -- 2024/08 \
-#link("https://os.educg.net/#/index?TYPE=26OS_K")[全国大学生计算机系统能力大赛（操作系统内核实现赛）]参赛作品，基于清华大学操作系统训练 rCore 项目，用 Rust 实现的类 Unix 操作系统内核，支持多进程，ext4 文件系统，VisionFive 2 平台。获得全国二等奖。GitHub：https://github.com/bosswnx/chaos
+#link("https://os.educg.net/#/index?TYPE=26OS_K")[全国大学生计算机系统能力大赛（操作系统内核实现赛）]参赛作品，基于清华大学操作系统训练 rCore 项目，用 Rust 实现的类 Unix 操作系统内核，支持多进程，ext4 文件系统，VisionFive 2 硬件平台。获得全国二等奖。GitHub：https://github.com/bosswnx/chaos
 
 *清华大学开源操作系统训练营* #h(1fr) 2024/01 -- 2024/05 \
-由清华大学主办的开源操作系统训练营，基于清华的 rCore，使用 Rust 编写一个简单的操作系统内核，内容设计内存管理、进程管理、文件系统等。本人全程参与训练，并满分通过最终答辩，获得优秀营员称号。
+由清华大学主办的开源操作系统训练营，基于清华的 rCore，使用 Rust 编写一个简单的操作系统内核，内容涉及内存管理、进程管理、文件系统等。本人全程参与训练，并满分通过最终答辩，获得优秀营员称号。
 
 *南京大学计算机系统基础实验* #h(1fr) 2023/02 -- 2023/05 \
 南京⼤学联合计算所“⼀⽣⼀芯”计划设计的⼤实验。主要内容是实现⼀个简化版的 QEMU 模拟器 NEMU，并在其
