@@ -50,7 +50,7 @@
 
 = *Nuoxian Wang*
 
-Email: bosswnx\@qq.com | GitHub:
+WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 #link("https://github.com/bosswnx")[bosswnx] | Website: #link("https://bosswnx.xyz")[bosswnx.xyz]
 
 == *Education*
@@ -73,8 +73,11 @@ Research Interests:
 == *Experience*
 #chiline()
 
+*#link("https://cloud.tencent.com/about?Is=sdk-topnav")[Tencent Cloud], Big Data OLAP R&D Intern* #h(1fr) 2026/05 -- Present \
+Participated in the R&D of Tencent Cloud TCHouse-D (based on Apache Doris), designed and implemented extensions to the Doris daemon monitoring functionality.
+
 *#link("https://www.kernelsoft.com")[KernelSoft], OS R&D Intern* #h(1fr) 2024/01 -- 2024/05 \
-Participated in the R&D of the self-developed intelligent cockpit real-time operating system. Successfully ported procfs related features into the kernel, receiving recognition from the mentor.
+Participated in the R&D of the self-developed intelligent cockpit real-time operating system. Successfully ported procfs-related features into the kernel, merged into the company's internal mainline repository.
 
 == *Projects*
 #chiline()
@@ -89,7 +92,7 @@ Entry for the #link("https://open.oceanbase.com/competition")[National College S
 Entry for the #link("https://os.educg.net/#/index?TYPE=26OS_K")[National College Student Computer Systems Capability Competition (OS Kernel Implementation)]. A Unix-like operating system kernel written in Rust based on Tsinghua University's rCore project. Supports multi-processing, ext4 file system, and the VisionFive 2 platform. Won the National Second Prize. GitHub: https://github.com/bosswnx/chaos
 
 *NJU ICSPA* #h(1fr) 2023/02 -- 2023/05 \
-A major experimental project affiliated with the "One Student One Chip" initiative jointly organized by Nanjing University and ICT, CAS. The main content involves building NEMU, a simplified QEMU emulator, and implementing Nanos-lite, a simple time-sharing operating system with paging support on top of it. Covered low-level computer domains such as RISC-V architecture and operating systems. Completed independently, gaining a deep understanding and mastery of the related knowledge. Code is not publicly available as per course requirements.
+A major lab under NJU-ICT(CAS) "One Student One Chip" initiative. Built NEMU (a simplified QEMU emulator) and Nanos-lite (a time-sharing OS with paging), covering RISC-V architecture and OS fundamentals. Completed independently with deep understanding.
 
 == *Awards*
 #chiline()
@@ -108,4 +111,4 @@ A major experimental project affiliated with the "One Student One Chip" initiati
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("March 16, 2026")
+#lastupdated("June 6, 2026")

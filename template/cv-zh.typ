@@ -74,8 +74,11 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 == *实习经历*
 #chiline()
 
+*#link("https://cloud.tencent.com/about?Is=sdk-topnav")[腾讯云]，大数据 OLAP 研发实习生* #h(1fr) 2026/05 -- 至今 \
+参与腾讯云 TCHouse-D （基于 Apache Doris）产品研发，设计并完成了 Doris daemon 监控功能的拓展。
+
 *#link("https://www.kernelsoft.com")[国科础石]，操作系统研发实习生* #h(1fr) 2024/01 -- 2024/05 \
-参与自研智能座舱础石实时操作系统研发，成功往内核里移植 proc 虚拟文件系统相关功能，获得 mentor 的认可。
+参与自研智能座舱础石实时操作系统研发，往内核里移植 proc 虚拟文件系统相关功能，已合并到公司内部仓库主线。
 
 == *项目经历*
 #chiline()
@@ -88,9 +91,6 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 
 *chaos* #h(1fr) 2024/01 -- 2024/08 \
 #link("https://os.educg.net/#/index?TYPE=26OS_K")[全国大学生计算机系统能力大赛（操作系统内核实现赛）]参赛作品，基于清华大学操作系统训练 rCore 项目，用 Rust 实现的类 Unix 操作系统内核，支持多进程，ext4 文件系统，VisionFive 2 硬件平台。获得全国二等奖。GitHub：https://github.com/bosswnx/chaos
-
-*清华大学开源操作系统训练营* #h(1fr) 2024/01 -- 2024/05 \
-由清华大学主办的开源操作系统训练营，基于清华的 rCore，使用 Rust 编写一个简单的操作系统内核，内容涉及内存管理、进程管理、文件系统等。本人全程参与训练，并满分通过最终答辩，获得优秀营员称号。
 
 *南京大学计算机系统基础实验* #h(1fr) 2023/02 -- 2023/05 \
 南京⼤学联合计算所“⼀⽣⼀芯”计划设计的⼤实验。主要内容是实现⼀个简化版的 QEMU 模拟器 NEMU，并在其
@@ -111,4 +111,4 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("2026年3月6日")
+#lastupdated("2026年6月6日")
