@@ -1,7 +1,5 @@
 // For more customizable options, please refer to official reference: https://typst.app/docs/reference/
 
-#show text: set text(font: "Linux Libertine")
-#show heading: set text(font: "Linux Biolinum")
 #show heading.where(level: 1): set text(size: 16pt)
 #show heading.where(level: 2): set text(size: 14pt)
 #show strong: set text(weight: 900)
@@ -83,7 +81,7 @@ Participated in the R&D of the self-developed intelligent cockpit real-time oper
 #chiline()
 
 *SBI-Fuzz* #h(1fr) 2025/09 -- Present \
-Individual research project. A fully automated fuzzing tool designed for RISC-V SBI bootloaders. It automatically generates test cases based on the interface definitions provided by the SBI specification and executes them using the QEMU emulator. Supports advanced features such as code coverage and seed mutation. Discovered two bugs in RustSBI which have been confirmed by the community.
+Individual research project. A fully automated fuzzing tool designed for RISC-V SBI bootloaders. It automatically generates test cases based on the interface definitions provided by the SBI specification and executes them using the QEMU emulator. Supports advanced features such as code coverage and seed mutation. Discovered two bugs in RustSBI.
 
 *MiniOB* #h(1fr) 2024/09 -- 2024/10 \
 Entry for the #link("https://open.oceanbase.com/competition")[National College Student Computer Systems Capability Competition (OceanBase Database Competition)], implementing a simplified database kernel. As the team leader, completed more than half of the tasks, covering basic features like update and advanced features like B+Tree, expressions, and functions. Achieved a perfect score in the preliminary round, ranking 19th nationally and 3rd in Beijing. GitHub: https://github.com/bosswnx/miniob-2024
@@ -92,7 +90,7 @@ Entry for the #link("https://open.oceanbase.com/competition")[National College S
 Entry for the #link("https://os.educg.net/#/index?TYPE=26OS_K")[National College Student Computer Systems Capability Competition (OS Kernel Implementation)]. A Unix-like operating system kernel written in Rust based on Tsinghua University's rCore project. Supports multi-processing, ext4 file system, and the VisionFive 2 platform. Won the National Second Prize. GitHub: https://github.com/bosswnx/chaos
 
 *NJU ICSPA* #h(1fr) 2023/02 -- 2023/05 \
-A major lab under NJU-ICT(CAS) "One Student One Chip" initiative. Built NEMU (a simplified QEMU emulator) and Nanos-lite (a time-sharing OS with paging), covering RISC-V architecture and OS fundamentals. Completed independently with deep understanding.
+A major lab under NJU-ICT(CAS) "One Student One Chip" initiative. Built NEMU (a simplified QEMU emulator) and Nanos-lite (a time-sharing OS with paging), covering RISC-V architecture and OS fundamentals.
 
 == *Awards*
 #chiline()
