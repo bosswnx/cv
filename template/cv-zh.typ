@@ -16,7 +16,7 @@
 
 // Feel free to change the margin below to best fit your own CV
 #set page(
-  margin: (x: 0.9cm, y: 1.3cm),
+  margin: (x: 0.9cm, y: 0.9cm),
 )
 
 
@@ -75,7 +75,7 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 #chiline()
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[腾讯云]，大数据 OLAP 研发实习生* #h(1fr) 2026/05 -- 至今 \
-参与腾讯云 TCHouse-D （基于 Apache Doris）产品研发，设计并完成了 Doris daemon 监控功能的拓展。
+参与腾讯云 TCHouse-D （基于 Apache Doris）产品维护和研发，修复多个 bug 并提交合并至社区：#link("https://github.com/apache/doris/pull/63537")[#63537]，#link("https://github.com/apache/doris/pull/65659")[#65659]，涉及 FE（Nereids 优化器，修复外表分区裁剪 TOCTOU 竞态 NPE）与 BE（Workload Group 指标精度优化），覆盖 Java/C++ 全栈并附单元测试。
 
 *#link("https://www.kernelsoft.com")[国科础石]，操作系统研发实习生* #h(1fr) 2024/01 -- 2024/05 \
 参与自研智能座舱础石实时操作系统研发，往内核里移植 proc 虚拟文件系统相关功能，已合并到公司内部仓库主线。
@@ -111,4 +111,4 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("2026年6月6日")
+#lastupdated("2026年7月21日")

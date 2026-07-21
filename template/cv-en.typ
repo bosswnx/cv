@@ -1,23 +1,19 @@
 // For more customizable options, please refer to official reference: https://typst.app/docs/reference/
 
+#set text(size: 10.5pt)
+
 #show heading.where(level: 1): set text(size: 16pt)
 #show heading.where(level: 2): set text(size: 14pt)
 #show strong: set text(weight: 900)
 
 #show link: underline
 
-// Uncomment the following lines to adjust the size of text
-// The recommend resume text size is from `10pt` to `12pt`
-// #set text(
-//   size: 12pt,
-// )
-
 // Feel free to change the margin below to best fit your own CV
 #set page(
-  margin: (x: 0.9cm, y: 1.3cm),
+  margin: (x: 0.9cm, y: 0.9cm),
 )
 
-#set par(justify: true)
+#set par(justify: true, leading: 0.65em)
 
 #let chiline() = {
   v(-3pt)
@@ -72,25 +68,25 @@ Research Interests:
 #chiline()
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[Tencent Cloud], Big Data OLAP R&D Intern* #h(1fr) 2026/05 -- Present \
-Participated in the R&D of Tencent Cloud TCHouse-D (based on Apache Doris), designed and implemented extensions to the Doris daemon monitoring functionality.
+Maintained and developed Tencent Cloud TCHouse-D (Apache Doris). Fixed bugs merged upstream: #link("https://github.com/apache/doris/pull/63537")[#63537], #link("https://github.com/apache/doris/pull/65659")[#65659] — FE (Nereids optimizer, external table partition pruning TOCTOU NPE) and BE (Workload Group metric precision), full-stack Java/C++ with unit tests.
 
 *#link("https://www.kernelsoft.com")[KernelSoft], OS R&D Intern* #h(1fr) 2024/01 -- 2024/05 \
-Participated in the R&D of the self-developed intelligent cockpit real-time operating system. Successfully ported procfs-related features into the kernel, merged into the company's internal mainline repository.
+Participated in R&D of a self-developed intelligent cockpit real-time OS. Ported procfs-related features into the kernel, merged into the company's internal mainline.
 
 == *Projects*
 #chiline()
 
 *SBI-Fuzz* #h(1fr) 2025/09 -- Present \
-Individual research project. A fully automated fuzzing tool designed for RISC-V SBI bootloaders. It automatically generates test cases based on the interface definitions provided by the SBI specification and executes them using the QEMU emulator. Supports advanced features such as code coverage and seed mutation. Discovered two bugs in RustSBI.
+Individual research project: fully automated fuzzing tool for RISC-V SBI bootloaders. Auto-generates test cases from SBI spec interfaces and runs them on QEMU, with code coverage and seed mutation. Two RustSBI bugs found and confirmed by the community.
 
 *MiniOB* #h(1fr) 2024/09 -- 2024/10 \
-Entry for the #link("https://open.oceanbase.com/competition")[National College Student Computer Systems Capability Competition (OceanBase Database Competition)], implementing a simplified database kernel. As the team leader, completed more than half of the tasks, covering basic features like update and advanced features like B+Tree, expressions, and functions. Achieved a perfect score in the preliminary round, ranking 19th nationally and 3rd in Beijing. GitHub: https://github.com/bosswnx/miniob-2024
+#link("https://open.oceanbase.com/competition")[National College Student Computer Systems Capability Competition (OceanBase Database Competition)] entry. Built a simplified database kernel as team lead, completing over half the tasks (update, B+Tree, expressions, functions). Perfect preliminary score; ranked 19th nationally, 3rd in Beijing. GitHub: https://github.com/bosswnx/miniob-2024
 
 *chaos* #h(1fr) 2024/01 -- 2024/08 \
-Entry for the #link("https://os.educg.net/#/index?TYPE=26OS_K")[National College Student Computer Systems Capability Competition (OS Kernel Implementation)]. A Unix-like operating system kernel written in Rust based on Tsinghua University's rCore project. Supports multi-processing, ext4 file system, and the VisionFive 2 platform. Won the National Second Prize. GitHub: https://github.com/bosswnx/chaos
+#link("https://os.educg.net/#/index?TYPE=26OS_K")[National College Student Computer Systems Capability Competition (OS Kernel Implementation)] entry. Unix-like kernel in Rust based on Tsinghua rCore; multi-process, ext4, VisionFive 2. National Second Prize. GitHub: https://github.com/bosswnx/chaos
 
-*NJU ICSPA* #h(1fr) 2023/02 -- 2023/05 \
-A major lab under NJU-ICT(CAS) "One Student One Chip" initiative. Built NEMU (a simplified QEMU emulator) and Nanos-lite (a time-sharing OS with paging), covering RISC-V architecture and OS fundamentals.
+*NJU Computer Systems Fundamentals Lab* #h(1fr) 2023/02 -- 2023/05 \
+Major lab in NJU–ICT(CAS) "One Student One Chip" program. Built NEMU (simplified QEMU) and Nanos-lite (paged time-sharing OS) covering RISC-V and OS fundamentals. Self-taught throughout; completed independently with deep understanding.
 
 == *Awards*
 #chiline()
@@ -98,15 +94,13 @@ A major lab under NJU-ICT(CAS) "One Student One Chip" initiative. Built NEMU (a 
   columns: (auto, 1fr, auto),
   align: (left, center, right),
   column-gutter: 2em,
-  row-gutter: 0.8em,
+  row-gutter: 0.5em,
   [CSCC (OceanBase Database Competition)], [Provincial 3rd Place], [2024/12],
-
   [CSCC (OS Kernel Implementation)], [National 2nd Prize], [2024/08],
-
   [CCPC (Regional) Jinan], [Bronze Medal], [2023/12],
   [ICPC (Regional) Nanjing], [Bronze Medal], [2023/11],
   [MCM/ICM Mathematical Contest in Modeling], [Honorable Mention], [2023/02],
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("June 6, 2026")
+#lastupdated("July 21, 2026")
