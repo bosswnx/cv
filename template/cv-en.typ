@@ -68,7 +68,9 @@ Research Interests:
 #chiline()
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[Tencent Cloud], Big Data OLAP R&D Intern* #h(1fr) 2026/05 -- Present \
-Maintained and developed Tencent Cloud TCHouse-D (Apache Doris). Fixed bugs merged upstream: #link("https://github.com/apache/doris/pull/63537")[#63537], #link("https://github.com/apache/doris/pull/65659")[#65659] — FE (Nereids optimizer, external table partition pruning TOCTOU NPE) and BE (Workload Group metric precision), full-stack Java/C++ with unit tests.
+Maintained and developed Tencent Cloud TCHouse-D (based on Apache Doris), diagnosing and fixing FE/BE issues and contributing upstream. Both independently submitted PRs were merged into Apache Doris mainline.
+- #link("https://github.com/apache/doris/pull/63537")[#63537] (BE / C++): Replaced the fixed configured interval used for Workload Group CPU and Scan IO rate calculations with the actual monotonic-clock interval, correcting metric inaccuracies caused by scheduling delays or runtime configuration changes; added division-by-zero protection and unit tests.
+- #link("https://github.com/apache/doris/pull/65659")[#65659] (FE / Java): Reproduced and diagnosed a TOCTOU race in Nereids external-table partition pruning: the partition map was frozen during plan construction, while sorted partition ranges were re-read during pruning. A concurrent `ALTER TABLE ADD/DROP PARTITION` cache refresh could therefore mix snapshots, causing binary-search pruning to return a partition absent from the old map and trigger an NPE.
 
 *#link("https://www.kernelsoft.com")[KernelSoft], OS R&D Intern* #h(1fr) 2024/01 -- 2024/05 \
 Participated in R&D of a self-developed intelligent cockpit real-time OS. Ported procfs-related features into the kernel, merged into the company's internal mainline.
@@ -103,4 +105,4 @@ Major lab in NJU–ICT(CAS) "One Student One Chip" program. Built NEMU (simplifi
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("July 21, 2026")
+#lastupdated("August 3, 2026")

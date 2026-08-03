@@ -75,7 +75,9 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 #chiline()
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[腾讯云]，大数据 OLAP 研发实习生* #h(1fr) 2026/05 -- 至今 \
-参与腾讯云 TCHouse-D （基于 Apache Doris）产品维护和研发，修复多个 bug 并提交合并至社区：#link("https://github.com/apache/doris/pull/63537")[#63537]，#link("https://github.com/apache/doris/pull/65659")[#65659]，涉及 FE（Nereids 优化器，修复外表分区裁剪 TOCTOU 竞态 NPE）与 BE（Workload Group 指标精度优化），覆盖 Java/C++ 全栈并附单元测试。
+参与腾讯云 TCHouse-D（基于 Apache Doris）产品维护与研发，负责 FE/BE 问题定位、修复及社区贡献，独立提交的两个 PR 均已合并至 Apache Doris 主线。
+- #link("https://github.com/apache/doris/pull/63537")[#63537]（BE / C++）：将 Workload Group 的 CPU 与 Scan IO 速率计算由固定配置周期改为单调时钟实际间隔，修正调度延迟及运行时修改配置导致的指标偏差，并补充防除零保护与单元测试。
+- #link("https://github.com/apache/doris/pull/65659")[#65659]（FE / Java）：复现并定位 Nereids 外表分区裁剪的 TOCTOU 竞态：执行计划构建时冻结分区映射，裁剪阶段却重新读取有序分区范围；并发执行 `ALTER TABLE ADD/DROP PARTITION` 刷新缓存后，新旧快照不一致，使二分裁剪返回旧映射中不存在的分区并触发 NPE。
 
 *#link("https://www.kernelsoft.com")[国科础石]，操作系统研发实习生* #h(1fr) 2024/01 -- 2024/05 \
 参与自研智能座舱础石实时操作系统研发，往内核里移植 proc 虚拟文件系统相关功能，已合并到公司内部仓库主线。
@@ -92,10 +94,6 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 *chaos* #h(1fr) 2024/01 -- 2024/08 \
 #link("https://os.educg.net/#/index?TYPE=26OS_K")[全国大学生计算机系统能力大赛（操作系统内核实现赛）]参赛作品，基于清华大学操作系统训练 rCore 项目，用 Rust 实现的类 Unix 操作系统内核，支持多进程，ext4 文件系统，VisionFive 2 硬件平台。获得全国二等奖。GitHub：https://github.com/bosswnx/chaos
 
-*南京大学计算机系统基础实验* #h(1fr) 2023/02 -- 2023/05 \
-南京⼤学联合计算所“⼀⽣⼀芯”计划设计的⼤实验。主要内容是实现⼀个简化版的 QEMU 模拟器 NEMU，并在其
-中实现⼀个简单的⽀持分⻚的分时操作系统 Nanos-lite。内容涉及 RISC-V 体系结构、操作系统等计算机底层领域。本人全程自学，独立完成并深入理解掌握了相关知识。
-
 == *竞赛获奖*
 #chiline()
 #grid(
@@ -111,4 +109,4 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("2026年7月21日")
+#lastupdated("2026年8月3日")
