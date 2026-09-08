@@ -1,10 +1,10 @@
 // For more customizable options, please refer to official reference: https://typst.app/docs/reference/
 
 // #show heading: set text(font: "FZShuSong-Z01S")
-#show text: set text(font: "Songti SC", size: 10pt)
+#set text(font: "Songti SC", size: 10pt)
 #show heading.where(level: 1): set block(below: 0.5em, above: 0.5em)
 #show heading.where(level: 2): set block(below: 0.55em, above: 1.1em)
-#show heading.where(level: 1): set text(size: 14pt)
+#show heading.where(level: 1): set text(size: 18pt)
 #show heading.where(level: 2): set text(size: 12pt)
 #show strong: set text(weight: 900)
 
@@ -22,7 +22,7 @@
 )
 
 
-#set par(justify: true, leading: 0.7em)
+#set par(justify: true, leading: 0.8em, spacing: 1em)
 
 #let chiline() = {
   v(-1.5pt)
@@ -103,7 +103,7 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
   columns: (auto, 1fr, auto),
   align: (left, center, right),
   column-gutter: 2em,
-  row-gutter: 0.6em,
+  row-gutter: 1em,
   [全国大学生计算机系统能力大赛（OceanBase 数据库大赛）], [全省第三名], [2024/12],
   [全国大学生计算机系统能力大赛（操作系统内核实现赛）], [全国二等奖], [2024/08],
   [CCPC 中国大学生程序设计竞赛（区域赛）济南站], [铜牌], [2023/12],

@@ -4,7 +4,7 @@
 
 #show heading.where(level: 1): set block(below: 0.5em, above: 0.5em)
 #show heading.where(level: 2): set block(below: 0.55em, above: 1.1em)
-#show heading.where(level: 1): set text(size: 14pt)
+#show heading.where(level: 1): set text(size: 18pt)
 #show heading.where(level: 2): set text(size: 12pt)
 #show strong: set text(weight: 900)
 
@@ -16,7 +16,7 @@
 )
 
 
-#set par(justify: true, leading: 0.6em)
+#set par(justify: true, leading: 0.6em, spacing: 1em)
 
 #let chiline() = {
   v(-1.5pt)
@@ -97,7 +97,7 @@ Individual research project: automated fuzzing tool for RISC-V SBI bootloaders. 
   columns: (auto, 1fr, auto),
   align: (left, center, right),
   column-gutter: 2em,
-  row-gutter: 0.6em,
+  row-gutter: 1em,
   [CSCC (OceanBase Database Competition)], [Provincial 3rd Place], [2024/12],
   [CSCC (OS Kernel Implementation)], [National 2nd Prize], [2024/08],
   [CCPC (Regional) Jinan], [Bronze Medal], [2023/12],
