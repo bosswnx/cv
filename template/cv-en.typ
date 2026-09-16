@@ -45,7 +45,7 @@
 // Uncomment the following lines to add the optional prompt at the bottom of the first CV page
 // #continuescvpage()
 
-= *Nuoxian Wang*
+= *Nuoxian Wang* #h(0.6em) #text(size: 10pt)[*Apache Doris Contributor* · 5 PRs submitted, 3 merged into mainline]
 
 WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 #link("https://github.com/bosswnx")[bosswnx] | Website: #link("https://bosswnx.xyz")[bosswnx.xyz]
@@ -61,15 +61,15 @@ Bachelor, School of Computer and Communication Engineering, Internet of Things E
 
 == *Skills*
 #chiline()
-Languages: C/C++, Rust (proficient); Python (familiar)
-
-Research Interests: Linux Kernel, RISC-V SBI, Database Kernel
+Languages: C/C++, Rust (proficient); Python (familiar) \
+Focus: Linux Kernel, RISC-V SBI, Database Kernel \
+Tools: ASAN, QEMU, Docker, iptables
 
 == *Experience*
 #chiline()
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[Tencent Cloud], Big Data OLAP R&D Intern* #h(1fr) 2026/05 -- Present \
-Maintained and developed Tencent Cloud TCHouse-D (based on Apache Doris), diagnosing and fixing FE/BE issues and contributing upstream. Three of five independently submitted PRs have been merged into Apache Doris mainline.
+Maintained and developed Tencent Cloud TCHouse-D (based on Apache Doris), diagnosing and fixing FE/BE issues and submitting fixes upstream as PRs.
 - #link("https://github.com/apache/doris/pull/67310")[#67310] (FE / Java, under review): Fixed an availability bug after master FE failover: a non-master FE with lagging journal replay kept forwarding statements to the stale old master for up to 300s, and `FORWARD_WITH_SYNC` statements hung for up to 18 minutes. Receiver now rejects up front with a structured `NOT_MASTER` result; sender falls back to bdbje leader lookup / follower probing to rediscover the master and retries once. Includes a 4-FE docker + iptables fault-injection reproduction plus 5 unit tests.
 - #link("https://github.com/apache/doris/pull/67442")[#67442] (BE / C++, merged): Fixed an ASAN heap-use-after-free in `SharedMemtable` destruction under group commit: the flush task held only a weak reference to `FlushToken`; once `run()`'s local shared_ptr dropped the last reference, cascaded destruction tore down `RowsetWriterContext` before `~SharedMemtable()` finished dereferencing it. The LSN map is now captured at submission via shared_ptr, keeping just the precise cleanup dependency alive (without extending `RowsetWriter`'s lifetime); added UAF regression tests.
 - #link("https://github.com/apache/doris/pull/65659")[#65659] (FE / Java, merged): Reproduced and diagnosed a TOCTOU race in Nereids external-table partition pruning — the partition map was frozen during plan construction but sorted partition ranges were re-read during pruning. A concurrent `ALTER TABLE ADD/DROP PARTITION` cache refresh could mix snapshots, causing binary-search pruning to return a partition absent from the old map and trigger an NPE.
@@ -77,7 +77,7 @@ Maintained and developed Tencent Cloud TCHouse-D (based on Apache Doris), diagno
 - #link("https://github.com/apache/doris/pull/67404")[#67404] (FE / Java, under review): Aligned two long-failing unit-test assertions on master with the behavior intentionally introduced by later PRs (Iceberg OCC snapshot fence, V1 inverted-index format deprecation); updated assertions and added semantic comments.
 
 *#link("https://www.kernelsoft.com")[KernelSoft], OS R&D Intern* #h(1fr) 2024/01 -- 2024/05 \
-Participated in R&D of a self-developed intelligent cockpit real-time OS. Ported procfs-related features into the kernel, merged into the company's internal mainline.
+Participated in R&D of a self-developed intelligent cockpit real-time OS. Ported procfs-related features into the kernel; merged into the company's internal mainline.
 
 == *Projects*
 #chiline()
@@ -86,7 +86,7 @@ Participated in R&D of a self-developed intelligent cockpit real-time OS. Ported
 Individual research project: automated fuzzing tool for RISC-V SBI bootloaders. Auto-generates test cases from SBI spec interfaces and executes them on QEMU, with code coverage and seed mutation. Two RustSBI bugs found and confirmed by the community.
 
 *MiniOB* #h(1fr) 2024/09 -- 2024/10 \
-#link("https://open.oceanbase.com/competition")[CSCC (OceanBase Database Competition)] entry: simplified database kernel built as team lead (over half the tasks: update, B+Tree, expressions, functions). Perfect preliminary score; ranked 19th nationally, 3rd in Beijing. GitHub: https://github.com/bosswnx/miniob-2024
+#link("https://open.oceanbase.com/competition")[CSCC (OceanBase Database Competition)] entry: simplified database kernel built as team lead (over half the tasks: update, B+Tree, expressions, functions). Perfect preliminary score; 19th nationally, 3rd in Beijing. GitHub: https://github.com/bosswnx/miniob-2024
 
 *chaos* #h(1fr) 2024/01 -- 2024/08 \
 #link("https://os.educg.net/#/index?TYPE=26OS_K")[CSCC (OS Kernel Implementation)] entry: Unix-like kernel in Rust built on Tsinghua's rCore; multi-process, ext4, VisionFive 2. National 2nd Prize. GitHub: https://github.com/bosswnx/chaos
@@ -98,7 +98,7 @@ Individual research project: automated fuzzing tool for RISC-V SBI bootloaders. 
   align: (left, center, right),
   column-gutter: 2em,
   row-gutter: 1em,
-  [CSCC (OceanBase Database Competition)], [Provincial 3rd Place], [2024/12],
+  [CSCC (OceanBase Database Competition)], [3rd in Beijing (19th nationally)], [2024/12],
   [CSCC (OS Kernel Implementation)], [National 2nd Prize], [2024/08],
   [CCPC (Regional) Jinan], [Bronze Medal], [2023/12],
   [ICPC (Regional) Nanjing], [Bronze Medal], [2023/11],
@@ -106,4 +106,4 @@ Individual research project: automated fuzzing tool for RISC-V SBI bootloaders. 
 )
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("September 4, 2026")
+#lastupdated("September 16, 2026")
