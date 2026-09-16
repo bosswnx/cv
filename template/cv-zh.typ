@@ -76,8 +76,8 @@ WeChat&Tel: 13959288816 | Email: bosswnx\@qq.com | GitHub:
 
 *#link("https://cloud.tencent.com/about?Is=sdk-topnav")[腾讯云]，大数据 OLAP 研发实习生* #h(1fr) 2026/05 -- 至今 \
 参与腾讯云 TCHouse-D（基于 Apache Doris）产品维护与研发，负责 FE/BE 问题定位与修复，修复均以 PR 形式提交社区。
-- #link("https://github.com/apache/doris/pull/67310")[#67310]（FE / Java，评审中）：修复 master FE 故障切换后的可用性缺陷——日志回放滞后的非 master FE 仍持续向已失效的旧 master 转发语句（最长 300s），`FORWARD_WITH_SYNC` 语句更会在日志同步等待中挂起至 18 分钟。改为在执行前以结构化 `NOT_MASTER` 直接拒绝，发送端回退到 bdbje leader 查询 / follower 探活重新发现 master 并重试一次；附带 4 FE docker + iptables 故障注入复现与 5 个单测。
 - #link("https://github.com/apache/doris/pull/67442")[#67442]（BE / C++，已合并）：修复 group commit 下 `SharedMemtable` 析构时的 ASAN heap-use-after-free。flush 任务仅持有 `FlushToken` 的 weak_ptr，`run()` 结束时最后一个 shared_ptr 释放引发级联析构，而 `~SharedMemtable()` 仍解引用已悬空的 `RowsetWriterContext*`。改为在提交时持有所分配 LSN map 的 shared_ptr，只保活精确清理依赖而非整个 `RowsetWriter`，并补充 UAF 回归测试。
+- #link("https://github.com/apache/doris/pull/67310")[#67310]（FE / Java，评审中）：修复 master FE 故障切换后的可用性缺陷——日志回放滞后的非 master FE 仍持续向已失效的旧 master 转发语句（最长 300s），`FORWARD_WITH_SYNC` 语句更会在日志同步等待中挂起至 18 分钟。改为在执行前以结构化 `NOT_MASTER` 直接拒绝，发送端回退到 bdbje leader 查询 / follower 探活重新发现 master 并重试一次；附带 4 FE docker + iptables 故障注入复现与 5 个单测。
 - #link("https://github.com/apache/doris/pull/65659")[#65659]（FE / Java，已合并）：复现并定位 Nereids 外表分区裁剪的 TOCTOU 竞态：执行计划构建时冻结分区映射，裁剪阶段却重新读取有序分区范围；并发执行 `ALTER TABLE ADD/DROP PARTITION` 刷新缓存后，新旧快照不一致，使二分裁剪返回旧映射中不存在的分区并触发 NPE。
 - #link("https://github.com/apache/doris/pull/63537")[#63537]（BE / C++，已合并）：将 Workload Group 的 CPU 与 Scan IO 速率计算由固定配置周期改为单调时钟实际间隔，修正调度延迟及运行时修改配置导致的指标偏差，并补充防除零保护与单元测试。
 - #link("https://github.com/apache/doris/pull/67404")[#67404]（FE / Java，评审中）：修复 master 上两个长期失败的单元测试——其断言与后续 PR 有意引入的行为（Iceberg OCC 快照栅栏、V1 倒排索引格式弃用）相矛盾，对齐断言并补充语义说明。
